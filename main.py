@@ -1,6 +1,7 @@
 def main():
     """Entry point of the program. Processes the book content and outputs word and character counts for user insight."""
-    book_content = get_book_content("./books/frankenstein.txt")
+    book_path = "./books/frankenstein.txt"
+    book_content = get_book_content(book_path)
     words_count, chars_count = count_words(book_content), count_chars(book_content)
     sorted_chars_count = sort_chars_count(chars_count)
     for output in [fmt_words_count(words_count), fmt_chars_count(sorted_chars_count)]:
